@@ -1,14 +1,21 @@
 {
   "name": "foodnutritionskill",
   "version": "1.0.0",
-  "description": "",
+  "description": "alex skill tutorial section 4",
   "main": "index.js",
   "scripts": {
+    "proxy": "bst proxy lambda index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simjh0919/food-nutrition.git"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bespoken-tools": "^1.2.10"
+    "bespoken-tools": "^1.2.10",
+    "npm": "^6.0.1",
+    "winston": "^2.4.2"
   }
 }
