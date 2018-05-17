@@ -14,7 +14,7 @@
   "request": {
     "intent": {
       "slots": {
-        "FoodItem": {
+        "FoodItem": { 
           "name": "FoodItem",
           "value": "butter salted"
         }

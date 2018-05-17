@@ -218,11 +218,11 @@ intentHandlers['GetNutritionInfo'] = (request,session,response,slots) => {
 
     // telling user that we have more results
     if(results.length > MAX_RESPONSES) {
-      response.speechText += `There are more food matched your search. You can say more information for more information. Or say stop to stop the skill.`;
-      response.repromptText = `You can say more information or stop.`;
+      response.speechText += `There are more food matched your search. You can say more information for more information. Or say stop to stop the skill. `;
+      response.repromptText = `You can say more information or stop. `;
       // save the results number
       session.attributes.resultLength = results.length;
-      session.attributes.results = reslts.slice(MAX_RESPONSES, MAX_FOOD_ITEMS);
+      session.attributes.results = results.slice(MAX_RESPONSES, MAX_FOOD_ITEMS);
       response.shouldEndSession = false;
       response.done();
     }
@@ -234,7 +234,7 @@ intentHandlers['GetNutritionInfo'] = (request,session,response,slots) => {
 }
 
 intentHandlers['GetNextEventIntent'] = (request,session,response,slots) => {
-  response.speechText = `Your search resulted in ${session.attributes.resultLength} food items. Here are the few food items from search. Please add more keywords from this list for better results.`;
+  response.speechText = `Your search resulted in ${session.attributes.resultLength} food items. Here are the few food items from search. Please add more keywords from this list for better results. `;
   session.attributes.results.forEach(item => response.speechText += `${item[0]}. `);
   response.shouldEndSession = true;
   response.done();
