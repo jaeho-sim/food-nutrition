@@ -194,8 +194,8 @@ var onSessionEnded = (sessionEndedRequest, session) => {
 var onLaunch = (launchRequest, session, response) => {
   logger.debug('onLaunch requestId=' + launchRequest.requestId + ', sessionId=' + session.sessionId);
 
-  //response.speechText = 'Welcome msg';
-  //response.repromptText = 'Reprompt msg';
+  response.speechText = 'Welcome to food nutrition skill';
+  response.repromptText = 'You can say for example, how many calories are in butter salted?';
   response.shouldEndSession = false;
   response.done();
 }
